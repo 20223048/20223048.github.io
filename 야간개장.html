@@ -3,20 +3,24 @@
     <head>
         <meta charset="utf-8">
         <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
             h3 {
                 padding-left: 10px;
                 border-left: solid 8px red;
             }
             ul {
                 border: solid 1px black;
-                padding: 20px;
-                margin: 10px;
+                padding: 20px 30px 30px 30px;
+                margin: 20px 0 0 20px;
+                width: 450px;
             }
             li {
-                border-top: dotted 1px gray;
                 border-bottom: dotted 1px gray;
-                margin-left: 30px;
-                padding: 10px;
+                margin-left: 10px;
+                padding: 10px 0 10px 0;
                 list-style: none;
             }
             .black {
@@ -35,9 +39,7 @@
             <li><span class="black">- 프로그램</span> : 야간동물원 관람, 동물생태 설명회, 식물전시</li>
             <li><span class="black">- 방문자 신분</span> : <input type="radio" name="info" value="public">호서대 재학생
                 <input type="radio" name="info" value="private">일반인
-                <form action="https://20223048.github.io/방문신청.html">
-                    <input type="submit" value="방문신청">
-                </form>
+                <form action="https://20223048.github.io/방문신청.html"><input type="submit" value="방문신청"></form>
             </li>
         </ul>
     </body>
