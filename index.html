@@ -7,6 +7,37 @@
         <h3>
             안녕하세요 디지털기술경영학과 2학년 서민주입니다.
         </h3>
+
+        <img onmouseout="this.style.width='100px'" img onmouseover="this.style.width='200px'" src="ham2.jpg" width="100px">
+    </body>
+</html>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function changeImage() {
+                var image = document.getElementById("myImage");
+			if (image.src.match("bulbon")) {
+				image.src = "bear1.jpg";
+			} else {
+				image.src = "bear2.jpg";
+			}
+		}
+
+        function resetImage() {
+			var image = document.getElementById("myImage");
+			image.src = "bear1.jpg";
+		}
+        </script>
+    </head>
+    <body>
+        <img id="myImage" src="bear1.jpg" style="width: 100px;">
+
+        <br><br>
+
+        <button onclick="changeImage()">우쭐 곰</button>
+        <button onclick="resetImage()">우는 곰</button>
     </body>
 </html>
 
@@ -14,39 +45,112 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+
         <style>
-            table, tr, th, td {
-                border: solid 1px black;
-                border-collapse: collapse;
-                padding: 8px;
+            table {
+                border-spacing: 3px;
+                border: solid 5px #000;
+                text-align: center;
             }
+            th {
+                border: solid 1px green;
+            }
+            td {
+                border: solid 1px red;
+                padding: 30px;
+            }
+
+            thead {
+                background: pink; color: blue;
+            }
+            thead:hover {
+                color: aqua;
+            }
+            th.next {background: deeppink; color: white;}
+            tfoot {background: hotpink;}
         </style>
     </head>
+
     <body>
-        <h3>서민주 2학년 1학기 시간표</h3>
         <table>
-            <tr>
-                <th>교시</th> <th>월</th> <th>화</th> <th>수</th> <th>목</th> <th>금</th>
-            </tr>
-            <tr>
-                <td>1교시</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>2교시</td> <td>초급생활독일어</td> <td>공간이만드는심리세계</td> <td>경영통계</td> <td>&nbsp;</td> <td>웹프로그래밍</td>
-            </tr>
-            <tr>
-                <td>3교시</td> <td>초급생활독일어</td> <td>공간이만드는심리세계</td> <td>&nbsp;</td> <td>대학영어회화2</td> <td>웹프로그래밍</td>
-            </tr>
-            <tr>
-                <td>4교시</td> <td>세계사를바꾼사건들과벤처정신</td> <td>&nbsp;</td> <td>&nbsp;</td> <td>대학영어회화2</td> <td>&nbsp;</td>
-            </tr>
-            <tr>
-                <td>5교시</td> <td>세계사를바꾼사건들과벤처정신</td> <td>초대교회리더십</td> <td>&nbsp;</td> <td>예술과생활</td> <td>경영통계</td>
-            </tr>
-            <tr>
-                <td>6교시</td> <td>&nbsp;</td> <td>초대교회리더십</td> <td>채플</td> <td>예술과생활</td> <td>경영통계</td>
-            </tr>
+
+            <thead>
+                <tr>
+                    <th colspan="6"> 20220348 서민주 시간표 </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>/</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                </tr>
+
+                <tr>
+                    <th>1교시</th>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <th>2교시</th>
+                    <td>초급 생활 <br><br> 독일어</td>
+                    <td>공간이 만드는 <br><br> 심리세계</td>
+                    <td>경영통계</td>
+                    <td>&nbsp;</td>
+                    <td>웹프로그래밍</td>
+                </tr>
+
+                <tr>
+                    <th>3교시</th>
+                    <td>초급 생활 <br><br> 독일어</td>
+                    <td>공간이 만드는 <br><br> 심리세계</td>
+                    <td>&nbsp;</td>
+                    <td>대학 영어<br><br>  회화2</td>
+                    <td>웹프로그래밍</td>
+                </tr>
+
+                <tr>
+                    <th>4교시</th>
+                    <td>세계사를 바꾼 <br><br> 사건들과 벤처정신</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>대학 영어 <br><br> 회화2</td>
+                    <td>&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <th>5교시</th>
+                    <td>세계사를 바꾼 <br><br> 사건들과 벤처정신</td>
+                    <td>초대교회 리더십</td>
+                    <td>&nbsp;</td>
+                    <td>예술과 생활</td>
+                    <td>경영통계</td>
+                </tr>
+
+                <tr>
+                    <th>6교시</th>
+                    <td>&nbsp;</td>
+                    <td>초대교회 리더십</td>
+                    <td>채플</td>
+                    <td>예술과 생활</td>
+                    <td>경영통계</td>
+                </tr>
+            </tbody>
+
         </table>
+
+
+
+
 
         <br><br>
 
